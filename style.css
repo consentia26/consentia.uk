@@ -1,0 +1,352 @@
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #cce6ff; /* fond bleu clair */
+  color: #003366;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.main-header h1 {
+  font-size: 1.8em;
+  line-height: 1.4;
+}
+
+/* Sections */
+.service-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.service-section.alt-bg {
+  background-color: #f0f8ff; /* couleur alternative pour sections */
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.service-content.column {
+  flex-direction: column; /* pour liste d'autres problèmes */
+}
+
+.service-text.full-width {
+  width: 100%;
+}
+
+/* Images */
+.service-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.service-image:hover {
+  transform: scale(1.05);
+}
+
+/* Textes */
+.service-text h2 {
+  margin-top: 0;
+}
+
+.service-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #004999;
+}
+
+/* Liste autres problèmes */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-image {
+    margin-bottom: 20px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #cce6ff; /* fond bleu clair */
+  color: #003366;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Header
+========================= */
+.main-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.main-header h1 {
+  font-size: 2em;
+  line-height: 1.4;
+}
+
+.main-header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* =========================
+   Sections
+========================= */
+.service-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.service-section.alt-bg {
+  background-color: #f0f8ff; /* couleur alternative pour sections */
+}
+
+.service-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.service-content.column {
+  flex-direction: column; /* pour listes ou formulaire */
+}
+
+.service-text.full-width {
+  width: 100%;
+}
+
+/* =========================
+   Images
+========================= */
+.service-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.service-image:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   Textes
+========================= */
+.service-text h2 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.service-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   Boutons
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #004999;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Listes autres problèmes
+========================= */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
+/* =========================
+   Formulaire Free Assessment
+========================= */
+iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 900px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-image {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
+
+/* =========================
+   Bannières pour titres principaux
+========================= */
+.main-header {
+  background-color: #ffffff; /* blanc pour la bannière */
+  color: #003366; /* texte bleu foncé */
+  text-align: center;
+  padding: 50px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* petite ombre pour effet "bannière" */
+  border-bottom: 2px solid #cce6ff; /* séparation avec la section */
+}
+
+.main-header h1 {
+  font-size: 2em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.main-header p {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* =========================
+   Centre Google Form
+========================= */
+.form-container {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center;     /* centre verticalement */
+  flex-direction: column;
+  width: 100%;
+  min-height: 80vh;        /* occupe presque tout l'écran */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-container iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 900px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Header avec logo à gauche */
+.main-header-left {
+  display: flex;
+  align-items: center;      /* centre verticalement le logo et texte */
+  background-color: #ffffff; /* bannière blanche */
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #cce6ff;
+}
+
+/* Logo petit */
+.main-header-left .logo-left {
+  max-width: 80px; /* petite taille */
+  height: auto;
+  margin-right: 20px; /* espace entre logo et texte */
+}
+
+/* Texte de la bannière */
+.main-header-left .header-text h1 {
+  font-size: 1.8em;
+  line-height: 1.3;
+  margin: 0;
+  color: #003366;
+}
+
+.main-header-left .header-text p {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #003366;
+}
