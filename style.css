@@ -73,6 +73,31 @@ a:hover {
   text-align: left;
   position: relative;
 }
+
+/* Quote section */
+.quote-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.quote-section .quote-text {
+  flex: 1;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+.quote-section .quote-image {
+  flex: 1;
+  text-align: right;
+}
+.quote-section .quote-image img {
+  max-width: 400px;
+  height: auto;
+}
+
 .main-header-left::after {
   content: '';
   position: absolute;
@@ -135,13 +160,43 @@ a:hover {
   color: var(--primary-dark);
 }
 
-/* add a padlock icon before each service heading for thematic flair */
+/* padlock icon removed from all headings */
 .service-text h2::before {
-  content: '🔒';
-  display: inline-block;
-  margin-right: 8px;
-  font-size: 1.2rem;
-  vertical-align: middle;
+  content: none;
+}
+
+/* remove padlock icon for FAQ questions */
+.faq-item h2::before {
+  content: none;
+}
+
+/* style each FAQ item as a banner separator */
+.faq-item {
+  border-top: 2px solid var(--primary);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.faq-item:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* collapsible details styling */
+details.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  outline: none;
+}
+details.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item {
+  padding: 10px 0;
+}
+details.faq-item[open] {
+  background: var(--bg-light);
 }
 .service-text p {
   margin-bottom: 15px;
@@ -238,5 +293,13 @@ footer p {
   }
   .main-nav .nav-links {
     display: none; /* hide for mobile; hamburger could be added later */
+  }
+  .quote-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .quote-section .quote-image {
+    text-align: center;
+    margin-top: 20px;
   }
 }

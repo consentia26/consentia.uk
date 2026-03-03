@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- laptop base -->
+  <rect x="40" y="110" width="120" height="60" stroke="black" fill="none" stroke-width="2"/>
+  <!-- laptop screen -->
+  <rect x="50" y="80" width="100" height="60" stroke="black" fill="none" stroke-width="2"/>
+
+  <!-- adult figure -->
+  <circle cx="90" cy="40" r="20" stroke="black" fill="none" stroke-width="2"/>
+  <rect x="80" y="60" width="20" height="40" stroke="black" fill="none" stroke-width="2"/>
+
+  <!-- child figure -->
+  <circle cx="130" cy="50" r="15" stroke="black" fill="none" stroke-width="2"/>
+  <rect x="125" y="65" width="10" height="30" stroke="black" fill="none" stroke-width="2"/>
+</svg>
