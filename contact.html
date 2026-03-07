@@ -55,8 +55,30 @@
 <section class="service-section alt-bg">
   <div class="form-wrapper">
     <div class="form-left">
-      <!-- Google Form intégré -->
-      <iframe src="https://forms.gle/uqzmcXmg26kAHDAf6" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <!-- Contact Form with Web3Forms -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+        <input type="hidden" name="access_key" value="48462d54-a57e-4778-b302-06f1756dd0bd">
+        <input type="hidden" name="subject" value="New Assessment Request from Consentia Form">
+        <input type="hidden" name="from_name" value="Consentia Website">
+        <input type="hidden" name="redirect" value="https://consentia.uk/thank-you.html">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone (optional):</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Describe your issue:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
       <a href="index.html" class="btn">Back to Home</a>
     </div>
     

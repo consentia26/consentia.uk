@@ -271,6 +271,44 @@ ul li {
   font-size: 1.05em;
 }
 
+.process-steps {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.process-steps li {
+  position: relative;
+  padding-left: 60px;
+  counter-increment: step-counter;
+}
+.process-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.process-steps li:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 15px;
+  top: 45px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
 /* Form wrapper with contact box */
 .form-wrapper {
   display: flex;
@@ -292,12 +330,60 @@ ul li {
   gap: 20px;
 }
 
-.form-left iframe {
+.contact-form {
   width: 100%;
-  height: 800px;
-  border: none;
+  background: var(--bg-alt);
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(0,102,204,0.3);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 12px 30px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--primary-dark);
 }
 
 .form-left .btn {
