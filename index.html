@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,16 +7,14 @@
   <meta name="description" content="UK GDPR consultant helping individuals & businesses. Recover hacked social media, remove personal data, enforce GDPR rights. Free assessment.">
   <meta name="keywords" content="UK GDPR, GDPR consultant, data protection, hacked account recovery, remove personal data, GDPR advisory, data privacy, identity theft, UK data rights, ICO complaints">
   <meta name="author" content="Consentia">
-  <!-- Favicon Configuration -->
   <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
   <link rel="shortcut icon" href="/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0066cc">
+  <meta name="theme-color" content="#0a0f1e">
   <link rel="canonical" href="https://consentia.uk/">
   <meta name="robots" content="index,follow">
-  <!-- Social sharing -->
   <meta property="og:title" content="Consentia | Account Recovery & Data Protection">
   <meta property="og:description" content="Consentia helps people recover hacked accounts and protect personal data with expert privacy and security support.">
   <meta property="og:type" content="website">
@@ -37,132 +36,296 @@
     "areaServed": "GB",
     "serviceType": ["GDPR Consultation", "Account Recovery", "Data Privacy", "Data Removal", "ICO Complaints"],
     "logo": "https://consentia.uk/images/logo.png",
-    "image": "https://consentia.uk/images/logo.png",
-    "priceRange": "£",
-    "sameAs": ["https://www.consentia.uk"]
+    "priceRange": "£"
   }
   </script>
-  <!-- Google Font for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- site navigation -->
-<nav class="main-nav">
-  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Consentia Logo"></a>
+<!-- Navigation -->
+<nav class="main-nav" id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <span class="logo-text">Consentia</span>
+  </a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="im-a-company.html">I'm a Company</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
     <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
     <li><a href="faq-company.html">FAQ (Companies)</a></li>
   </ul>
   <div class="nav-right">
-    <a href="contact.html" class="nav-contact">Contact Us</a>
+    <a href="contact.html" class="nav-contact">Contact</a>
     <a href="contact.html" class="nav-cta">Free Assessment</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<header class="main-header-left">
-  <img src="images/logo.png" alt="Consentia Logo" class="logo-left">
-  <div class="header-text">
-    <h1>Hacked account? Private photo stolen? Online identity compromised?</h1>
-    <p>We can help you recover your account and secure your data for free.</p>
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="drawer-cta">Free Assessment</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">UK GDPR Specialists</div>
+    <h1 class="hero-title">
+      <span class="hero-title-line">Your data.</span>
+      <span class="hero-title-line hero-title-accent">Your rights.</span>
+      <span class="hero-title-line">Our expertise.</span>
+    </h1>
+    <p class="hero-sub">Hacked account? Private photo stolen? Online identity compromised?<br>We help you recover and protect what's yours — <em>for free</em>.</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Get Free Assessment</a>
+      <a href="#services" class="btn-ghost">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">GDPR</span><span class="stat-label">Certified Experts</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">24h</span><span class="stat-label">Initial Response</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">Free</span><span class="stat-label">First Assessment</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </header>
 
-  <!-- About section -->
-  <section class="service-section">
-    <div class="service-content column">
-      <div class="service-text full-width">
-        <h2>About Consentia Data Protection</h2>
-        <p>Consentia Data Protection is a company registered with The Registrar of Companies for England and Wales. We are a team of professionals with expertise in data protection and cybersecurity.</p>
-        <h3>How we help our clients:</h3>
-        <ol class="process-steps">
-          <li><strong>Free assessment:</strong> You explain your problem, and we will respond within 24–48 hours.</li>
-          <li><strong>Consultation:</strong> Depending on your issue, we offer a consultation to fully address your specific problem.</li>
-          <li><strong>Action plan:</strong> We will develop a tailored action plan and implement it to help you resolve your issue effectively.</li>
-        </ol>
+<!-- About -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-left">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Consentia Data Protection</h2>
+      <p>Registered with the Registrar of Companies for England and Wales, we are a team of professionals with deep expertise in data protection and cybersecurity. We stand between you and those who misuse your personal data.</p>
+    </div>
+    <div class="about-right">
+      <div class="process-list">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-body">
+            <h3>Free Assessment</h3>
+            <p>Explain your problem. We respond within 24–48 hours with a clear path forward.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div class="process-body">
+            <h3>Consultation</h3>
+            <p>We offer a tailored consultation to fully understand and address your specific situation.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div class="process-body">
+            <h3>Action Plan</h3>
+            <p>We develop and implement a bespoke action plan to resolve your issue effectively.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Quote section -->
-  <section class="quote-section">
-    <div class="quote-text">
-      "Your privacy matters to us. Every action we take is about protecting you, your data, and your peace of mind."
-    </div>
-    <div class="quote-image">
-      <img src="images/privacy-illustration.svg" alt="Woman and child using computer" />
-    </div>
-  </section>
-  <!-- Section 1 -->
-  <section class="service-section alt-bg">
-    <div class="service-content">
-      <img src="images/hacked-icon.png" alt="Hacked Account Icon" class="service-image">
-      <div class="service-text">
-        <h2>Recover Hacked Social Media Account</h2>
-        <p>If your Instagram, Facebook or TikTok account has been hacked, lost access, or someone is impersonating you online, we can guide you under UK GDPR to recover and protect your data.</p>
-        <a href="recover-hacked.html" class="btn">Learn More</a>
-      </div>
-    </div>
-  </section>
+<!-- Pull quote -->
+<section class="quote-banner">
+  <div class="quote-inner">
+    <div class="quote-mark">"</div>
+    <blockquote>Your privacy matters to us. Every action we take is about protecting you, your data, and your peace of mind.</blockquote>
+    <div class="quote-source">— Consentia, UK GDPR Advisory</div>
+  </div>
+</section>
 
-  <!-- Section 2 -->
-  <section class="service-section">
-    <div class="service-content">
-      <img src="images/remove-data-icon.png" alt="Remove Data Icon" class="service-image">
-      <div class="service-text">
-        <h2>Remove Personal Data from the Internet</h2>
-        <p>If your personal information has been published online without consent—like private photos, address, or phone number—we help you exercise your right to erasure under UK GDPR.</p>
-        <a href="remove-data.html" class="btn">Learn More</a>
-      </div>
-    </div>
-  </section>
+<!-- Services -->
+<section class="services-section" id="services">
+  <div class="services-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">How We Can Help</h2>
 
-  <!-- Section 3 -->
-  <section class="service-section alt-bg">
-    <div class="service-content">
-      <img src="images/company-refuse-icon.png" alt="Company Refuse Icon" class="service-image">
-      <div class="service-text">
-        <h2>Company Refusing to Delete Your Data</h2>
-        <p>If a company ignores your deletion request or continues processing your data, we guide you through formal GDPR steps and escalation with UK authorities.</p>
-        <a href="company-refusing.html" class="btn">Learn More</a>
-      </div>
-    </div>
-  </section>
+    <div class="services-grid">
 
-  <!-- Other common issues -->
-  <section class="service-section">
-    <div class="service-content column">
-      <div class="service-text full-width">
-        <h2>Other common issues</h2>
-        <ul>
-          <li><a href="contact.html">Data misuse by apps or websites</a></li>
-          <li><a href="contact.html">Identity theft online</a></li>
-          <li><a href="contact.html">Unauthorized sharing of photos</a></li>
-          <li><a href="contact.html">Marketing emails you didn’t consent to</a></li>
-        </ul>
-        <p>If your problem is not listed, <a href="contact.html">fill out our free assessment form</a> and we will help you secure your data.</p>
-      </div>
-    </div>
-  </section>
+      <a href="recover-hacked.html" class="service-card">
+        <div class="service-card-icon">
+          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="45" r="36" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+            <circle cx="45" cy="45" r="28" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+            <rect x="30" y="20" width="30" height="50" rx="5" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="rgba(201,168,76,0.05)"/>
+            <line x1="38" y1="24" x2="52" y2="24" stroke="rgba(201,168,76,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="45" cy="65" r="2" fill="rgba(201,168,76,0.4)"/>
+            <path d="M45 32 L54 36 L54 46 Q54 53 45 57 Q36 53 36 46 L36 36 Z" stroke="rgba(201,168,76,0.7)" stroke-width="1.5" fill="rgba(201,168,76,0.08)" stroke-linejoin="round"/>
+            <path d="M40 44 L43.5 47.5 L50 40" stroke="rgba(201,168,76,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="26" cy="38" r="1.5" fill="rgba(201,168,76,0.25)"/>
+            <circle cx="64" cy="52" r="1.5" fill="rgba(201,168,76,0.25)"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">Social Media</div>
+          <h3>Recover Hacked Accounts</h3>
+          <p>Instagram, Facebook, TikTok hacked? Someone impersonating you online? We guide you under UK GDPR to recover and protect your data.</p>
+          <span class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
 
-  <!-- FAQ section -->
-  <section class="service-section alt-bg">
-    <div class="service-content column">
-      <div class="service-text full-width">
-        <h2>Frequently Asked Questions</h2>
-         <p>Quick answers and practical steps for individuals and businesses dealing with GDPR issues.</p>
-         <p>
-           <a href="faq-individuals.html" class="btn">FAQ for Individuals</a>
-           <a href="faq-company.html" class="btn">FAQ for Companies</a>
-         </p>
-<footer>
-  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404790439</p>
-  <p><a href="privacy-policy.html">Privacy and Confidentiality</a></p>
-  <p>&copy; 2026 Consentia UK. All rights reserved.</p>
+      <a href="remove-data.html" class="service-card">
+        <div class="service-card-icon">
+          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="45" r="36" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+            <rect x="27" y="18" width="28" height="36" rx="3" stroke="rgba(201,168,76,0.5)" stroke-width="1.5" fill="rgba(201,168,76,0.05)"/>
+            <path d="M43 18 L43 26 L55 26" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
+            <line x1="33" y1="32" x2="49" y2="32" stroke="rgba(201,168,76,0.3)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="33" y1="37" x2="49" y2="37" stroke="rgba(201,168,76,0.3)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="33" y1="42" x2="43" y2="42" stroke="rgba(201,168,76,0.3)" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="55" cy="58" r="12" fill="rgba(10,15,30,0.8)" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+            <line x1="50" y1="53" x2="60" y2="63" stroke="rgba(201,168,76,0.9)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="60" y1="53" x2="50" y2="63" stroke="rgba(201,168,76,0.9)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="23" cy="44" r="1.5" fill="rgba(201,168,76,0.2)"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">Right to Erasure</div>
+          <h3>Remove Personal Data Online</h3>
+          <p>Private photos, your address, phone number published without consent? We enforce your Article 17 right to be forgotten.</p>
+          <span class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <a href="company-refusing.html" class="service-card">
+        <div class="service-card-icon">
+          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="45" cy="45" r="36" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+            <rect x="20" y="60" width="50" height="5" rx="2.5" fill="rgba(201,168,76,0.15)" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+            <line x1="45" y1="28" x2="45" y2="60" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+            <line x1="25" y1="36" x2="65" y2="36" stroke="rgba(201,168,76,0.6)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M25 36 Q20 44 17 44 Q20 44 23 44 Q26 44 29 36" stroke="rgba(201,168,76,0.5)" stroke-width="1.2" fill="rgba(201,168,76,0.07)"/>
+            <ellipse cx="23" cy="45" rx="7" ry="2" stroke="rgba(201,168,76,0.4)" stroke-width="1.2" fill="rgba(201,168,76,0.06)"/>
+            <path d="M65 36 Q62 46 59 46 Q56 46 53 46 Q50 46 47 36" stroke="rgba(201,168,76,0.5)" stroke-width="1.2" fill="rgba(201,168,76,0.07)"/>
+            <ellipse cx="59" cy="47" rx="7" ry="2" stroke="rgba(201,168,76,0.4)" stroke-width="1.2" fill="rgba(201,168,76,0.06)"/>
+            <circle cx="45" cy="28" r="3" fill="rgba(201,168,76,0.15)" stroke="rgba(201,168,76,0.5)" stroke-width="1.2"/>
+            <circle cx="20" cy="28" r="1.5" fill="rgba(201,168,76,0.2)"/>
+            <circle cx="70" cy="28" r="1.5" fill="rgba(201,168,76,0.2)"/>
+          </svg>
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">Enforcement</div>
+          <h3>Company Refusing to Delete</h3>
+          <p>If a company ignores your deletion request, we guide you through formal GDPR escalation with UK authorities including the ICO.</p>
+          <span class="card-link">Learn More <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Other Issues -->
+<section class="issues-section">
+  <div class="issues-inner">
+    <div class="issues-left">
+      <div class="section-label">Other Issues</div>
+      <h2 class="section-title">More Ways We Help</h2>
+      <p>Data problems come in many forms. If you don't see your issue, reach out — we cover the full spectrum of UK GDPR rights.</p>
+      <a href="contact.html" class="btn-primary">Get Free Assessment</a>
+    </div>
+    <div class="issues-right">
+      <ul class="issues-list">
+        <li><a href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Data misuse by apps or websites</a></li>
+        <li><a href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Identity theft online</a></li>
+        <li><a href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Unauthorized sharing of photos</a></li>
+        <li><a href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Marketing emails you didn't consent to</a></li>
+        <li><a href="im-a-company.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Business GDPR compliance</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Strip -->
+<section class="faq-strip">
+  <div class="faq-strip-inner">
+    <div class="section-label">Knowledge Base</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="faq-strip-sub">Quick answers and practical steps for individuals and businesses dealing with GDPR issues.</p>
+    <div class="faq-strip-actions">
+      <a href="faq-individuals.html" class="btn-primary">FAQ for Individuals</a>
+      <a href="faq-company.html" class="btn-outline">FAQ for Companies</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">Consentia</span>
+      <p>UK GDPR Advisory Services<br>Registered in England &amp; Wales</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="recover-hacked.html">Recover Hacked Account</a></li>
+        <li><a href="remove-data.html">Remove Personal Data</a></li>
+        <li><a href="company-refusing.html">Company Refusing Deletion</a></li>
+        <li><a href="im-a-company.html">For Companies</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+        <li><a href="faq-company.html">FAQ (Companies)</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <a href="mailto:contact@consentia.uk">contact@consentia.uk</a>
+      <a href="tel:07404790439">07404 790 439</a>
+      <a href="contact.html" class="btn-outline footer-cta">Free Assessment</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Consentia UK. All rights reserved.</p>
+    <a href="privacy-policy.html">Privacy &amp; Confidentiality</a>
+  </div>
 </footer>
 
+<script>
+  // Sticky nav shadow
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+
+  // Intersection Observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card, .process-item, .issues-list li').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

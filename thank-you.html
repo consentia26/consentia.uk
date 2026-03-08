@@ -1,68 +1,353 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | Consentia</title>
-  <!-- Favicon Configuration -->
+  <title>Thank You | Consentia Data Protection</title>
   <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0066cc">
-  <!-- Google Font for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="robots" content="noindex,nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .thankyou-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background effects */
+    .thankyou-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(26,58,107,0.25), transparent),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(201,168,76,0.07), transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .thankyou-card {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      width: 100%;
+      background: var(--ink-card);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 24px;
+      padding: 56px 52px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+      animation: card-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes card-in {
+      from { opacity: 0; transform: translateY(32px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Tick icon */
+    .tick-wrap {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 32px;
+      position: relative;
+      animation: tick-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+    }
+    @keyframes tick-in {
+      from { opacity: 0; transform: scale(0.4); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .tick-wrap svg { width: 100%; height: 100%; }
+
+    .thankyou-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      animation: fade-up 0.7s ease 0.4s both;
+    }
+    .thankyou-sub {
+      font-size: 0.85rem;
+      color: var(--gold);
+      text-align: center;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 36px;
+      animation: fade-up 0.7s ease 0.45s both;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent);
+      margin: 0 auto 36px;
+      animation: fade-up 0.7s ease 0.5s both;
+    }
+
+    /* Info blocks */
+    .info-block {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--ink-border);
+      animation: fade-up 0.7s ease both;
+    }
+    .info-block:first-of-type { border-top: 1px solid var(--ink-border); }
+    .info-block:nth-child(1) { animation-delay: 0.55s; }
+    .info-block:nth-child(2) { animation-delay: 0.63s; }
+    .info-block:nth-child(3) { animation-delay: 0.71s; }
+
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .info-text p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.78;
+      margin: 0;
+    }
+    .info-text strong {
+      color: var(--cream);
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Calendly CTA */
+    .calendly-block {
+      margin-top: 32px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.07), rgba(26,58,107,0.15));
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 14px;
+      padding: 28px 30px;
+      text-align: center;
+      animation: fade-up 0.7s ease 0.8s both;
+    }
+    .calendly-block p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.75;
+    }
+    .calendly-block strong {
+      color: var(--cream);
+      font-weight: 600;
+    }
+    .calendly-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--gold);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+    .calendly-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      margin-top: 28px;
+      padding: 18px 20px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--ink-border);
+      border-radius: 10px;
+      animation: fade-up 0.7s ease 0.9s both;
+    }
+    .disclaimer p {
+      font-size: 0.8rem;
+      color: rgba(245,240,232,0.38);
+      line-height: 1.75;
+      margin: 0;
+      text-align: center;
+    }
+    .disclaimer a {
+      color: var(--gold);
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .disclaimer a:hover { opacity: 1; }
+
+    /* Back home */
+    .back-home {
+      margin-top: 32px;
+      text-align: center;
+      animation: fade-up 0.7s ease 1s both;
+    }
+    .back-home a {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .back-home a:hover { color: var(--gold); }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .thankyou-card { padding: 36px 24px; }
+      .thankyou-title { font-size: 1.8rem; }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Consentia Logo"></a>
+<nav class="main-nav" id="mainNav">
+  <a href="index.html" class="nav-logo"><span class="logo-text">Consentia</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
   </ul>
   <div class="nav-right">
-    <a href="contact.html" class="nav-contact">Contact Us</a>
-    <a href="contact.html" class="nav-cta">Free Assessment</a>
+    <a href="contact.html" class="nav-cta">New Assessment</a>
   </div>
 </nav>
 
-<header class="main-header-left">
-  <img src="images/logo.png" alt="Consentia Logo" class="logo-left">
-  <div class="header-text">
-    <h1>Thank You!</h1>
-    <p>Your assessment request has been received.</p>
-  </div>
-</header>
+<div class="grid-bg"></div>
 
-<!-- Thank You Section -->
-<section class="service-section">
-  <div class="service-content column">
-    <div class="service-text full-width">
-      <h2>We've Received Your Message</h2>
-      <p>Thank you for reaching out to Consentia. We have successfully received your assessment request.</p>
-      
-      <h3>What happens next?</h3>
-      <ol class="process-steps">
-        <li><strong>Confirmation Email:</strong> Check your email inbox for a confirmation message from us.</li>
-        <li><strong>Review:</strong> Our team will carefully review your case and situation.</li>
-        <li><strong>Response:</strong> We will contact you within 24-48 hours with guidance and next steps.</li>
-      </ol>
+<main class="thankyou-page">
+  <div class="thankyou-card">
 
-      <p style="margin-top: 30px;"><strong>If your matter is urgent,</strong> please call us directly at <a href="tel:07404790439">07404790439</a></p>
+    <!-- Animated tick -->
+    <div class="tick-wrap">
+      <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="36" cy="36" r="34" stroke="rgba(201,168,76,0.2)" stroke-width="1.5"/>
+        <circle cx="36" cy="36" r="28" stroke="rgba(201,168,76,0.12)" stroke-width="1"/>
+        <circle cx="36" cy="36" r="22" fill="rgba(201,168,76,0.08)" stroke="rgba(201,168,76,0.45)" stroke-width="1.5"/>
+        <path d="M24 36 L32 44 L48 28" stroke="rgba(201,168,76,1)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+          stroke-dasharray="36" stroke-dashoffset="36">
+          <animate attributeName="stroke-dashoffset" from="36" to="0" dur="0.5s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </path>
+      </svg>
+    </div>
 
-      <div style="margin-top: 30px;">
-        <a href="index.html" class="btn">Back to Home</a>
+    <h1 class="thankyou-title">Thank You for Reaching Out</h1>
+    <p class="thankyou-sub">Enquiry Received &amp; Registered</p>
+    <div class="divider"></div>
+
+    <!-- Info blocks -->
+    <div class="info-block">
+      <div class="info-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.8)" stroke-width="1.8">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.21 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/>
+        </svg>
+      </div>
+      <div class="info-text">
+        <strong>Your enquiry is now under review</strong>
+        <p>Thank you for contacting Consentia Data Protection. We have received your GDPR enquiry and it is registered for review by our team.</p>
       </div>
     </div>
+
+    <div class="info-block">
+      <div class="info-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.8)" stroke-width="1.8">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="info-text">
+        <strong>Check your inbox (and spam)</strong>
+        <p>Please note that in some cases you may not receive an automatic email confirmation. If you're expecting one, please check your <strong>spam or junk folder</strong>.</p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,0.8)" stroke-width="1.8">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="info-text">
+        <strong>Response within 24–48 hours</strong>
+        <p>A member of our team will review your case and be in touch. During the consultation we will assess whether your data protection rights may have been affected and advise on next steps.</p>
+      </div>
+    </div>
+
+    <!-- Calendly CTA -->
+    <div class="calendly-block">
+      <p>Would you like to discuss your situation sooner? <strong>Book a 1-hour GDPR consultation</strong> at a time that suits you:</p>
+      <a href="https://calendly.com/consentiagdpr/1-hr-consultation-gdpr" target="_blank" rel="noopener" class="calendly-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        Book a Consultation
+      </a>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <p>Consentia Data Protection provides consultancy and guidance only and does not offer formal legal representation. If you require legal assistance, we can refer you to an affordable freelance solicitor.</p>
+    </div>
+
+    <!-- Back home -->
+    <div class="back-home">
+      <a href="index.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Home
+      </a>
+    </div>
+
   </div>
-</section>
+</main>
 
-<footer>
-  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404790439</p>
-  <p><a href="privacy-policy.html">Privacy and Confidentiality</a></p>
-  <p>&copy; 2026 Consentia UK. All rights reserved.</p>
-</footer>
-
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+</script>
 </body>
 </html>

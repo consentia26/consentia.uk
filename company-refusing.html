@@ -1,15 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Company Refusing GDPR Data Deletion? | UK GDPR Escalation | Consentia</title>
-  <!-- Favicon Configuration -->
   <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0066cc">
+  <meta name="theme-color" content="#0a0f1e">
   <meta name="description" content="Company ignoring your GDPR deletion request? Consentia guides formal escalation, ICO complaints, enforcement action under UK GDPR.">
   <meta name="keywords" content="company refusing deletion, GDPR enforcement, ICO complaint, data deletion request ignored, GDPR escalation, company GDPR violation, UK data protection, right to erasure not granted">
   <meta name="author" content="Consentia">
@@ -26,38 +26,82 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://consentia.uk/company-refusing.html"},"headline":"Company Refusing to Delete Your Data","description":"Guidance to escalate GDPR deletion requests and pursue ICO complaints."}
   </script>
-  <!-- Google Font for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Consentia Logo"></a>
+<nav class="main-nav" id="mainNav">
+  <a href="index.html" class="nav-logo"><span class="logo-text">Consentia</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
   </ul>
   <div class="nav-right">
-    <a href="contact.html" class="nav-contact">Contact Us</a>
+    <a href="contact.html" class="nav-contact">Contact</a>
     <a href="contact.html" class="nav-cta">Free Assessment</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="drawer-cta">Free Assessment</a></li>
+  </ul>
+</div>
+
+<!-- No logo here — nav bar only -->
 <header class="main-header-left">
-  <img src="images/logo.png" alt="Consentia Logo" class="logo-left">
   <div class="header-text">
+    <div class="section-label">GDPR Enforcement · ICO Escalation</div>
     <h1>Company Refusing to Delete Your Data</h1>
     <p>We guide you through formal GDPR requests and escalation if companies ignore deletion requests or continue processing your data.</p>
   </div>
 </header>
 
-<section class="service-section">
+<section class="service-section alt-bg">
   <div class="service-content">
-    <img src="images/company-refuse-icon.png" alt="Company Refuse Icon" class="service-image">
+    <div class="service-section-icon">
+      <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="55" cy="55" r="48" stroke="rgba(201,168,76,0.1)" stroke-width="1"/>
+        <!-- Base -->
+        <rect x="22" y="72" width="66" height="7" rx="3.5" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.45)" stroke-width="1.4"/>
+        <!-- Pole -->
+        <line x1="55" y1="30" x2="55" y2="72" stroke="rgba(201,168,76,0.5)" stroke-width="1.8"/>
+        <!-- Beam -->
+        <line x1="28" y1="42" x2="82" y2="42" stroke="rgba(201,168,76,0.65)" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- Left pan strings -->
+        <line x1="32" y1="42" x2="28" y2="54" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+        <line x1="42" y1="42" x2="38" y2="54" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+        <!-- Left pan -->
+        <ellipse cx="33" cy="56" rx="9" ry="3" stroke="rgba(201,168,76,0.5)" stroke-width="1.4" fill="rgba(201,168,76,0.07)"/>
+        <!-- Right pan strings (lower = weighted) -->
+        <line x1="68" y1="42" x2="66" y2="57" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+        <line x1="78" y1="42" x2="76" y2="57" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+        <!-- Right pan -->
+        <ellipse cx="71" cy="59" rx="9" ry="3" stroke="rgba(201,168,76,0.5)" stroke-width="1.4" fill="rgba(201,168,76,0.07)"/>
+        <!-- Top pin -->
+        <circle cx="55" cy="30" r="4" fill="rgba(201,168,76,0.12)" stroke="rgba(201,168,76,0.55)" stroke-width="1.4"/>
+        <!-- Decorative -->
+        <circle cx="22" cy="30" r="2" fill="rgba(201,168,76,0.2)"/>
+        <circle cx="88" cy="30" r="2" fill="rgba(201,168,76,0.2)"/>
+        <circle cx="18" cy="55" r="1.4" fill="rgba(201,168,76,0.12)"/>
+      </svg>
+    </div>
     <div class="service-text">
+      <h2>Enforce Your Right to Erasure</h2>
       <p>If a company ignores your deletion request, continues sending marketing communications, or fails to respond within one month, you have enforceable rights under UK GDPR (Articles 12, 15, 17).</p>
       <p>We guide you through structured GDPR requests, including escalation to the Information Commissioner's Office when needed.</p>
-      <p>Submit a Free Assessment for personalized guidance or book a consultation for urgent cases.</p>
+      <p>Submit a free assessment for personalised guidance or book a consultation for urgent cases.</p>
       <a href="contact.html" class="btn">Free Assessment</a>
       <a href="index.html" class="btn">Back to Home</a>
     </div>
@@ -65,9 +109,17 @@
 </section>
 
 <footer>
-  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404790439</p>
+  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404 790 439</p>
+  <p><a href="privacy-policy.html">Privacy &amp; Confidentiality</a></p>
   <p>&copy; 2026 Consentia UK. All rights reserved.</p>
 </footer>
 
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+  const ham = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  ham.addEventListener('click', () => { ham.classList.toggle('open'); drawer.classList.toggle('open'); });
+</script>
 </body>
 </html>

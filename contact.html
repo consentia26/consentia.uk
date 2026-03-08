@@ -1,17 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free GDPR Assessment | Get Expert Data Protection Help | Consentia</title>
-  <!-- Favicon Configuration -->
   <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
   <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-  <meta name="theme-color" content="#0066cc">
+  <meta name="theme-color" content="#0a0f1e">
   <meta name="description" content="Free GDPR assessment form. Submit your case & get expert guidance on account recovery, data removal, or GDPR enforcement in the UK.">
-  <meta name="keywords" content="free GDPR assessment, data protection help, GDPR consultation, free assessment form, UK GDPR advice, data privacy support, GDPR guidance">
   <meta name="author" content="Consentia">
   <link rel="canonical" href="https://consentia.uk/contact.html">
   <meta name="robots" content="index,follow">
@@ -26,62 +25,88 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ContactPage","mainEntity":{"@type":"Organization","name":"Consentia UK","email":"mailto:contact@consentia.uk","telephone":"07404790439","url":"https://consentia.uk/"}}
   </script>
-  <!-- Google Font for modern typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="main-nav">
-  <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Consentia Logo"></a>
+<nav class="main-nav" id="mainNav">
+  <a href="index.html" class="nav-logo"><span class="logo-text">Consentia</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
   </ul>
   <div class="nav-right">
-    <a href="contact.html" class="nav-contact">Contact Us</a>
+    <a href="contact.html" class="nav-contact">Contact</a>
     <a href="contact.html" class="nav-cta">Free Assessment</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="im-a-company.html">For Companies</a></li>
+    <li><a href="faq-individuals.html">FAQ (Individuals)</a></li>
+    <li><a href="faq-company.html">FAQ (Companies)</a></li>
+    <li><a href="contact.html" class="drawer-cta">Free Assessment</a></li>
+  </ul>
+</div>
+
+<!-- Compact page header — NO logo here -->
 <header class="main-header-left">
-  <img src="images/logo.png" alt="Consentia Logo" class="logo-left">
   <div class="header-text">
+    <div class="section-label">Free · No Obligation</div>
     <h1>Free GDPR Assessment</h1>
-    <p>Fill out the form below and we will contact you to help secure your data.</p>
+    <p>Fill out the form and we'll get back to you within 24–48 hours with expert guidance.</p>
   </div>
 </header>
 
-<!-- Section formulaire avec contact -->
+<!-- Form section -->
 <section class="service-section alt-bg">
   <div class="form-wrapper">
     <div class="form-left">
-      <!-- Contact Form with Web3Forms -->
       <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
         <input type="hidden" name="access_key" value="48462d54-a57e-4778-b302-06f1756dd0bd">
         <input type="hidden" name="subject" value="New Assessment Request from Consentia Form">
         <input type="hidden" name="from_name" value="Consentia Website">
         <input type="hidden" name="redirect" value="https://consentia.uk/thank-you.html">
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
 
-        <label for="phone">Phone (optional):</label>
-        <input type="tel" id="phone" name="phone">
+        <div>
+          <label for="phone">Phone <span style="font-weight:400;opacity:0.5">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="07xxx xxxxxx">
+        </div>
 
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="e.g. Hacked Instagram account" required>
+        </div>
 
-        <label for="message">Describe your issue:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+        <div>
+          <label for="message">Describe your issue</label>
+          <textarea id="message" name="message" rows="6" placeholder="Please describe your situation in as much detail as you're comfortable sharing..." required></textarea>
+        </div>
 
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit">Send Assessment Request</button>
       </form>
-      <a href="index.html" class="btn">Back to Home</a>
+
+      <a href="index.html" class="btn" style="margin-top:12px">← Back to Home</a>
     </div>
-    
+
     <div class="contact-box">
       <h3>Contact Us Directly</h3>
       <div class="contact-item">
@@ -90,17 +115,35 @@
       </div>
       <div class="contact-item">
         <p><strong>Phone</strong></p>
-        <p>07404790439</p>
+        <p><a href="tel:07404790439">07404 790 439</a></p>
+      </div>
+      <div class="contact-item">
+        <p><strong>Response time</strong></p>
+        <p>Within 24–48 hours</p>
+      </div>
+      <div class="contact-item">
+        <p><strong>Based in</strong></p>
+        <p>England &amp; Wales, UK</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404790439</p>
-  <p><a href="privacy-policy.html">Privacy and Confidentiality</a></p>
+  <p>Contact us: <a href="mailto:contact@consentia.uk">contact@consentia.uk</a> | 07404 790 439</p>
+  <p><a href="privacy-policy.html">Privacy &amp; Confidentiality</a></p>
   <p>&copy; 2026 Consentia UK. All rights reserved.</p>
 </footer>
 
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+  const ham = document.getElementById('hamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+</script>
 </body>
 </html>
