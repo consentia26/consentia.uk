@@ -543,6 +543,72 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* =====================
+   PROCESS SECTION
+   ===================== */
+.process-section {
+  padding: 100px 48px;
+  background: var(--ink);
+  border-top: 1px solid var(--ink-border);
+}
+.process-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 56px 52px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+.process-inner .section-label {
+  margin-bottom: 10px;
+}
+.process-inner .section-title {
+  margin-bottom: 32px;
+  text-align: center;
+}
+.process-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+.process-steps li {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.process-steps li strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(201,168,76,0.12);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.process-steps li {
+  color: var(--cream);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+.process-steps li::marker {
+  display: none;
+}
+.process-steps li p {
+  margin: 0;
+}
+
+/* =====================
    QUOTE BANNER
    ===================== */
 .quote-banner {
@@ -1220,6 +1286,155 @@ details.faq-item > *:not(summary) {
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.85;
+}
+
+/* ============================================================
+   PRIVACY POLICY — Trust & Confidence Styling
+   ============================================================ */
+
+.policy-header {
+  background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #141c2e 100%);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: inset 0 1px 0 rgba(201,168,76,0.2);
+}
+
+.policy-header .section-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.policy-header h1 {
+  color: var(--white);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.policy-header p {
+  color: var(--gold-light);
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+}
+
+/* Policy Intro Section with Trust Badge */
+.policy-intro {
+  background: linear-gradient(to right, #0a0f1e, #0f172a);
+  border-left: 4px solid var(--gold);
+  padding: 60px 48px !important;
+}
+
+.trust-badge {
+  display: inline-block;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.policy-intro p {
+  color: var(--cream);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.policy-intro strong {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+/* Policy Sections with Icons */
+.policy-section {
+  position: relative;
+  padding: 60px 48px !important;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.policy-section:not(.alt-bg) {
+  border-left-color: var(--blue-pale);
+}
+
+.policy-section.alt-bg {
+  border-left-color: var(--gold);
+}
+
+.policy-section:hover {
+  border-left-color: var(--gold-light);
+}
+
+.policy-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  display: inline-block;
+  opacity: 0.95;
+}
+
+.policy-section h2 {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+.policy-section p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.policy-list li {
+  color: var(--cream-dim);
+  padding: 10px 0 10px 24px;
+  position: relative;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.policy-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.policy-list li strong {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+/* Trust Link Styling */
+.trust-link {
+  color: var(--gold-light);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  transition: all 0.2s ease;
+}
+
+.trust-link:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
 }
 
 /* =====================
